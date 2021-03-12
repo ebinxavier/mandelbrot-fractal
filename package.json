@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jimp": "^0.16.1",
+    "mathjs": "^9.3.0"
+  }
+}
