@@ -14,22 +14,20 @@ const mandelBrot = (c) => {
 };
 
 const getImage = () => {
-  const DIM = 1500;
-  const W = DIM,
-    H = DIM;
-
+  const DIM = 500;
+  // Change this window values to get different patterns
   const RE_START = -1.5;
   const RE_END = 1.5;
   const IM_START = -2.5;
   const IM_END = 0.5;
 
   const pixels2D = [];
-  for (let x = 0; x < W; x++) {
+  for (let x = 0; x < DIM; x++) {
     console.log(DIM - x);
-    for (let y = 0; y < H; y++) {
+    for (let y = 0; y < DIM; y++) {
       let c = complex(
-        IM_START + (y / H) * (IM_END - IM_START),
-        RE_START + (x / W) * (RE_END - RE_START)
+        IM_START + (y / DIM) * (IM_END - IM_START),
+        RE_START + (x / DIM) * (RE_END - RE_START)
       );
       const intensity = mandelBrot(c);
       if (!pixels2D[x]) pixels2D[x] = [];
